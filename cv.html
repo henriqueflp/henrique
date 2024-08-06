@@ -3,34 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Your Name</title>
+    <title>CV | Henrique Berger Roisenberg </title>
     <style>
-        /* Include the same CSS as in index.html */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+        header img.left {
+            width: 90px;
+            height: 90px;
+            margin-left: 20px;
+        }
+        header img.right {
+            width: 90px;
+            height: 120px;
+            margin-right: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin: 5px 0 0;
+        }
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            background: #333; /* Added background color for navigation links */
+        }
+        nav a:hover {
+            background: #575757;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .main-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+        .right-column {
+            width: 200px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .right-column img {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>PhD Candidate | Scientist</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cv.html">CV</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html">Publications</a>
-            <a href="grants.html">Grants</a>
-            <a href="personal.html">Personal</a>
-        </nav>
+        <img src="seismo.png" alt="Left Image" class="left">
+        <div class="header-content">
+            <h1>Henrique Berger Roisenberg</h1>
+            <p>PhD Candidate in Earth Sciences | Geophysics</p>
+        </div>
+        <img src="3x4.jpg" alt="Right Image" class="right">
     </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="grants.html">Grants</a>
+        <a href="personal.html">Personal</a>
+    </nav>
 
     <div class="container">
         <div class="main-content">
-            <h2>Curriculum Vitae</h2>
-            <p>Here you can provide information about your education, work experience, and other relevant details.</p>
+            <!-- Main content here -->
+            <div id="education" class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <strong>Roma Tre University</strong>, PhD Student in Earth Sciences, 2023-2025
+                        <br>Research Topic: Seismic Ambient Noise and Surface-Wave Attenuation
+                    </li>
+                    <li>
+                        <strong>Federal University of Rio Grande do Sul (UFRGS)</strong>, MSc in Geosciences, 2021-2022
+                        <br>Research Topic: Paleomagnetism
+                        <br>CNPq Scholarship Holder
+                    </li>
+                    <li>
+                        <strong>Federal University of Santa Catarina (UFSC)</strong>, BSc in Geology, 2015-2020
+                        <br>Graduated with honors, GPA: 9.26/10.00
+                        <br>Exchange Student at University of Bergen
+                        <br>Member of AAPG, SBG, IAS
+                    </li>
+                </ul>
+            </div>
+
+            <div id="experience" class="section">
+                <h2>Research and Work Experience</h2>
+                <ul>
+				    <li>
+                        <strong>TA Roma Tre University</strong>, PhD Student, Rome, Italy, Sep 2023 - Jan 2024
+                        <br>Teaching assistant of the course "Observational Seismology". 
+                    </li>
+                    <li>
+                        <strong>Roma Tre University</strong>, PhD Student, Rome, Italy, Jan 2023 - Dec 2025
+                        <br>Research in seismology and crustal studies, focusing on shear velocities and attenuation of crustal structures.
+                    </li>
+                    <li>
+                        <strong>Paleomagnetism Laboratory</strong>, MSc Student, Florianópolis, Brazil, Mar 2021 - Nov 2022
+                        <br>Research on magnetostratigraphy of a core in Sergipe-Alagoas Basin funded by Petrobras.
+                    </li>
+                    <li>
+                        <strong>QIGEO Consulting Company</strong>, Research Assistant, Florianópolis, Brazil, Oct 2019 - Mar 2021
+                        <br>Performed fluid substitution on wells and used Multidimensional Scaling for seismic inversion results.
+                    </li>
+                    <li>
+                        <strong>Reservoir Geology Laboratory</strong>, Researcher, Florianópolis, Brazil, Aug 2019 - Dec 2020
+                        <br>Studied outcrops of Jaicós Formation using Virtual Outcrop Models for reservoir characterization.
+                    </li>
+                    <li>
+                        <strong>Connectionism and Cognitive Sciences Laboratory</strong>, Researcher, Florianópolis, Brazil, Jan 2018 - Jul 2019
+                        <br>Developed Gassmann Fluid Substitution software for pseudo-well simulation.
+                    </li>
+                    <li>
+                        <strong>Micropaleontology Laboratory</strong>, Researcher, Florianópolis, Brazil, Jan 2017 - Jul 2017
+                        <br>Collected and studied calcareous fossils for environmental reconstruction of Pântano do Sul beach.
+                    </li>
+                </ul>
+            </div>
+
+            <div id="publications" class="section">
+                <h2>Publications</h2>
+                <ul>
+                    <li>Roisenberg, H. B., et al. (2024). Surface-wave attenuation and phase-velocity maps using the AlpArray seismic network. EGU24-753.</li>
+                    <li>Roisenberg, H. B., et al. (2022). Digital outcrop models applied to high-resolution stratigraphy in braided fluvial systems. Journal of South American Earth Sciences, 104006.</li>
+                    <li>Manna, M. O., et al. (2021). Changes in fluvial architecture induced by discharge variability, Jaicós Formation, Parnaíba Basin, Brazil. Sedimentary Geology, 420, 105924.</li>
+                    <li>Nunes, et al. (2021). HPC for Seismic Processing and Stochastic Inversion in Brazil Asset. SIAM Conference on Mathematical and Computational Issues in the Geosciences.</li>
+                    <li>Roisenberg, et al. (2020). Modelos Virtuais de Afloramento Aplicados a Arquitetura de Sistemas Fluviais: Estudo de Caso na Formação Jaicos, Bacia do Parnaíba, Brasil. 50º Congresso Brasileiro de Geologia, v. 1, p. 339-339.</li>
+                    <li>Manna, et al. (2021). Low and High Discharge Variability Fluvial Styles: example of the Jaicos Formation, Parnaíba Basin, Brazil. 35th Meeting of Sedimentology, Prague, Czech Republic. Book of Abstracts.</li>
+                    <li>Ferrari, et al. (2021). Arquitetura Deposicional de um Sistema Fluvial Entrelaçado. 50º Congresso Brasileiro de Geologia, v. 2, p. 561-561.</li>
+                    <li>Rosa, et al. (2021). Mapeamento Litoestratigráfico em Escala 1:25.000 do Complexo Metamorfico Brusque na Região de Lageado Baixo, Botuverá, SC. 50º Congresso Brasileiro de Geologia, v. 1, p. 150-150.</li>
+                    <li>Oliveira, et al. (2021). Análise Multi-Escala de Sistemas Fluviais Entrelaçados da Formação Jaicos, Bacia do Parnaíba, NE Brasil. 50º Congresso Brasileiro de Geologia, v. 1, p. 203-203.</li>
+					
+					<p><a href="https://scholar.google.com/citations?user=nFnu_ZoAAAAJ&hl=en target="_blank" style="color: #0000FF; text-decoration: none;">Google Scholar</a></p>
+
+                </ul>
+            </div>
+
+            <div id="skills" class="section">
+                <h2>Technical Strengths</h2>
+                <ul>
+                    <li>Programming: Matlab, Python</li>
+                    <li>Typesetting: LaTeX, Microsoft Office</li>
+                    <li>Modeling Software: RokDoc, MOVE, Petrel</li>
+                    <li>Georeferencing Software: ArcGIS, QGIS</li>
+                </ul>
+                <h2>Language Skills</h2>
+                <ul>
+                    <li>English: Proficient</li>
+                    <li>Portuguese: Proficient</li>
+                    <li>Spanish: Proficient</li>
+                    <li>Italian: Proficient</li>
+                    <li>German: Intermediate</li>
+                </ul>
+            </div>
+
+            <div id="volunteering" class="section">
+                <h2>Volunteering Activities</h2>
+                <ul>
+                    <li>
+                        <strong>AAPG UFSC Student Chapter</strong>, Coordinator, Florianópolis, Brazil, Jul 2018 - Jul 2019
+                        <br>Organized events with researchers from universities and the oil and gas industry.
+                    </li>
+                    <li>
+                        <strong>Connectionism and Cognitive Sciences Laboratory</strong>, Researcher, Florianópolis, Brazil, Jan 2018 - Jul 2019
+                        <br>Volunteer research resulting in a product and report for UFSC and Petrobras.
+                    </li>
+                    <li>
+                        <strong>Micropaleontology Laboratory</strong>, Researcher, Florianópolis, Brazil, Jan 2017 - Jul 2017
+                        <br>Volunteer research continued by another student, resulting in a report for UFSC.
+                    </li>
+                    <li>
+                        <strong>Teaching Assistant</strong>, Instrumental Geology course, UFSC, Aug 2016 - Dec 2016
+                        <br>Assisted in teaching the Instrumental Geology course for one semester.
+                    </li>
+                </ul>
+            </div>
+
+            <div id="awards" class="section">
+                <h2>Awards and Recognitions</h2>
+                <ul>
+                    <li>
+                        <strong>Third Best Poster</strong> at the CRUST Workshop (2024)
+                        <br>Awarded for the poster "Surface Wave Attenuation From Seismic Ambient Noise in the Greater Alpine Region".
+                    </li>
+                    <li>
+                        <strong>Best Oral Presentation</strong> at the 50th Brazilian Geological Congress (2021)
+                        <br>Awarded for the presentation "Virtual Outcrop Models applied to the architecture of fluvial systems: study case in Jaicós Formation, Parnaíba Basin, Brazil" in the thematic section "Remote Sensing, Geostatistics and Spatial Modeling."
+                    </li>
+                    <li>
+                        <strong>Best Graduating Student</strong> (2020)
+                        <br>Awarded the medal and certificate of Best Graduating Student for achieving the highest GPA in class.
+                    </li>
+                    <li>
+                        <strong>Academic Achievements</strong> (2015, 2016, 2017, 2018, 2020)
+                        <br>Certified multiple times for excellent academic performance.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <img src="romatre_logo.jpeg" alt="Roma Tre University">
+            <img src="ufrgs_logo.png" alt="Federal University of Rio Grande do Sul">
+            <img src="ufsc_logo.png" alt="Federal University of Santa Catarina">
+			<img src="bergen_logo.png" alt="University of Bergen">
         </div>
     </div>
+	
+	<div style="height: 50px;"></div>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Henrique Berger Roisenberg. All rights reserved.</p>
     </footer>
 </body>
 </html>

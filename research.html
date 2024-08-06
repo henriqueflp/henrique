@@ -3,34 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | Your Name</title>
+    <title>Research | Henrique Berger Roisenberg </title>
     <style>
-        /* Include the same CSS as in index.html */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+        header img.left {
+            width: 90px;
+            height: 90px;
+            margin-left: 20px;
+        }
+        header img.right {
+            width: 90px;
+            height: 120px;
+            margin-right: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin: 5px 0 0;
+        }
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            background: #333; /* Added background color for navigation links */
+        }
+        nav a:hover {
+            background: #575757;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .main-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+        .right-column {
+            width: 200px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .right-column img {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>PhD Candidate | Scientist</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cv.html">CV</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html">Publications</a>
-            <a href="grants.html">Grants</a>
-            <a href="personal.html">Personal</a>
-        </nav>
+        <img src="seismo.png" alt="Left Image" class="left">
+        <div class="header-content">
+            <h1>Henrique Berger Roisenberg</h1>
+            <p>PhD Candidate in Earth Sciences | Geophysics</p>
+        </div>
+        <img src="3x4.jpg" alt="Right Image" class="right">
     </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="grants.html">Grants</a>
+        <a href="personal.html">Personal</a>
+    </nav>
 
     <div class="container">
         <div class="main-content">
-            <h2>Research</h2>
-            <p>Details about your research projects, areas of interest, and current work.</p>
+            <p>My current research focuses on applying seismic methods to uncover the heterogeneities of the crust. 
+            I am utilizing ambient noise tomography and receiver functions to study the European crust. 
+            Additionally, the intriguing phenomenon of seismic wave attenuation captivates me, and I have been exploring it, jointly with seismic velocities
+            to reveal the thermochemical and structural properties of the crust.</p>
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Physical properties of the crust</li>
+                <li>Passive methods on seismic tomography</li>
+                <li>Attenuation of seismic waves</li>
+                <li>Machine learning</li>
+                <li>Data analysis</li>
+            </ul>
         </div>
     </div>
 
+	
+	<div style="height: 50px;"></div>
+
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Henrique Berger Roisenberg. All rights reserved.</p>
     </footer>
 </body>
 </html>

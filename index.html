@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Your Name</title>
+    <title>Home | Henrique Berger Roisenberg </title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,11 +15,33 @@
         header {
             background: #333;
             color: #fff;
-            padding: 10px 0;
-            text-align: center;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+        header img.left {
+            width: 90px;
+            height: 90px;
+            margin-left: 20px;
+        }
+        header img.right {
+            width: 90px;
+            height: 120px;
+            margin-right: 20px;
         }
         header h1 {
             margin: 0;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin: 5px 0 0;
         }
         nav {
             text-align: center;
@@ -30,6 +52,7 @@
             padding: 10px 15px;
             text-decoration: none;
             font-weight: bold;
+            background: #333; /* Added background color for navigation links */
         }
         nav a:hover {
             background: #575757;
@@ -59,27 +82,32 @@
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>PhD Candidate | Scientist</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cv.html">CV</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html">Publications</a>
-            <a href="grants.html">Grants</a>
-            <a href="personal.html">Personal</a>
-        </nav>
+        <img src="seismo.png" alt="Left Image" class="left">
+        <div class="header-content">
+            <h1>Henrique Berger Roisenberg</h1>
+            <p>PhD Candidate in Earth Sciences | Geophysics</p>
+        </div>
+        <img src="3x4.jpg" alt="Right Image" class="right">
     </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="grants.html">Grants</a>
+        <a href="personal.html">Personal</a>
+    </nav>
 
     <div class="container">
         <div class="main-content">
-            <h2>Welcome to My Website</h2>
-            <p>This is the home page of my personal website. Here you can find information about my research, publications, grants, and more.</p>
+            <h2>Welcome to My Personal Website</h2>
+            <p>I am currently a PhD candidate in Earth Sciences at Roma Tre University in Rome, Italy. My research focus is on seismology, specially the use of passive seismic methods to study the Earth's crust. Here you can find information about my research, publications, grants, and more. Feel free to contact me :)</p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Henrique Berger Roisenberg. All rights reserved.</p>
     </footer>
 </body>
 </html>
