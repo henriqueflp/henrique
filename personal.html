@@ -3,34 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal | Your Name</title>
+    <title>Personal | Henrique Berger Roisenberg</title>
     <style>
-        /* Include the same CSS as in index.html */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #0000FF;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+        header img.left {
+            width: 90px;
+            height: 90px;
+            margin-left: 20px;
+        }
+        header img.right {
+            width: 90px;
+            height: 120px;
+            margin-right: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin: 5px 0 0;
+        }
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            background: #fff; /* Added background color for navigation links */
+        }
+        nav a:hover {
+            background: #575757;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .main-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+        .right-column {
+            width: 200px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .right-column img {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .personal-img {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        footer {
+            background: #0000FF;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>PhD Candidate | Scientist</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cv.html">CV</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html">Publications</a>
-            <a href="grants.html">Grants</a>
-            <a href="personal.html">Personal</a>
-        </nav>
+        <img src="seismo.png" alt="Left Image" class="left">
+        <div class="header-content">
+            <h1>Henrique Berger Roisenberg</h1>
+            <p>PhD Candidate in Earth Sciences | Geophysics</p>
+        </div>
+        <img src="3x4.jpg" alt="Right Image" class="right">
     </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="grants.html">Grants</a>
+        <a href="personal.html">Personal</a>
+    </nav>
 
     <div class="container">
         <div class="main-content">
-            <h2>Personal</h2>
-            <p>Information about your personal interests, hobbies, or additional background.</p>
+            <h2>Nice to meet you!  &#127758 &#127752</h2>
+            <p>What's up? My name is Henrique (pronounciation /ẽˈʁiki/) and I was born on a Brazilian island in the Atlantic Ocean called Florianópolis. After spending 25 years growing up in this surfing and nature paradise, I decided to embark on new adventures across the Atlantic. I am currently pursuing my PhD in Earth Sciences at Roma Tre University in Rome, Italy. When I'm not immersed in seismic data and geological structures, I love exploring the Eternal City, traveling to new countries, engaging in photography, playing with my dogs &#128021 (I have two back in BR), and spending quality time with friends and family.</p>
+
+            <div style="text-align:center;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d141338.48164403053!2d-48.566805725592364!3d-27.5955693254068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952737fae26c5a83%3A0x8f325d767404d010!2sFlorian%C3%B3polis%2C%20State%20of%20Santa%20Catarina%2C%20Brazil!5e0!3m2!1sen!2sus!4v1626718712511!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <p>Universities have always been my passion. Throughout my nine years of geological studies, I've had the opportunity to study at four different universities, each offering unique environments and opportunities to make new friends. I completed my bachelor's degree in geology at UFSC and a master's degree in Marine Geology at UFRGS, located a bit further south in Brazil. During my bachelor's studies, I spent a semester in Norway, studying Geophysics at the University of Bergen. It was there that my passion for geophysics truly blossomed.</p>
+                        
+            <p>My favorite hobbies are watching Formula One &#127937 and learning new languages!</p>
+                        
         </div>
     </div>
 
+    <div style="height: 50px;"></div>
+
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Henrique Berger Roisenberg. All rights reserved.</p>
     </footer>
 </body>
 </html>

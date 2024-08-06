@@ -3,34 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | Your Name</title>
+    <title>Publications | Henrique Berger Roisenberg </title>
     <style>
-        /* Include the same CSS as in index.html */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #0000FF;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+        header img.left {
+            width: 90px;
+            height: 90px;
+            margin-left: 20px;
+        }
+        header img.right {
+            width: 90px;
+            height: 120px;
+            margin-right: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin: 5px 0 0;
+        }
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            background: #fff; /* Added background color for navigation links */
+        }
+        nav a:hover {
+            background: #575757;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .main-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+        .right-column {
+            width: 200px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .right-column img {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #0000FF;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>PhD Candidate | Scientist</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cv.html">CV</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html">Publications</a>
-            <a href="grants.html">Grants</a>
-            <a href="personal.html">Personal</a>
-        </nav>
+        <img src="seismo.png" alt="Left Image" class="left">
+        <div class="header-content">
+            <h1>Henrique Berger Roisenberg</h1>
+            <p>PhD Candidate in Earth Sciences | Geophysics</p>
+        </div>
+        <img src="3x4.jpg" alt="Right Image" class="right">
     </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cv.html">CV</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="grants.html">Grants</a>
+        <a href="personal.html">Personal</a>
+    </nav>
 
     <div class="container">
         <div class="main-content">
-            <h2>Publications</h2>
-            <p>List of your publications with links or details.</p>
-        </div>
-    </div>
+            <!-- Main content here -->
+            <div id="education" class="section">
+                <h2>Check out my latest works here:</h2>
+                <ul>
+					<li>Roisenberg, H. B. et al. (2024). Rayleigh wave attenuation and phase velocity maps of the greater Alpine region from ambient noise. (Submitted to Scientific Reports).</li>
+					<li>Cammarano, F., et al. (2024). On crustal composition of the Sardinia-Corsica continental block inferred from receiver functions. EGUsphere, 2024, 1-32. </li>
+					<li>Roisenberg, H. B., et al. (2024). Surface-wave attenuation and phase-velocity maps using the AlpArray seismic network. EGU24-753.</li>
+                    <li>Roisenberg, H. B., et al. (2022). Digital outcrop models applied to high-resolution stratigraphy in braided fluvial systems. Journal of South American Earth Sciences, 104006.</li>
+                    <li>Manna, M. O., et al. (2021). Changes in fluvial architecture induced by discharge variability, Jaicós Formation, Parnaíba Basin, Brazil. Sedimentary Geology, 420, 105924.</li>
+                    <li>Nunes, et al. (2021). HPC for Seismic Processing and Stochastic Inversion in Brazil Asset. SIAM Conference on Mathematical and Computational Issues in the Geosciences.</li>
+                    <li>Roisenberg, et al. (2020). Modelos Virtuais de Afloramento Aplicados a Arquitetura de Sistemas Fluviais: Estudo de Caso na Formação Jaicos, Bacia do Parnaíba, Brasil. 50º Congresso Brasileiro de Geologia, v. 1, p. 339-339.</li>
+                    <li>Manna, et al. (2021). Low and High Discharge Variability Fluvial Styles: example of the Jaicos Formation, Parnaíba Basin, Brazil. 35th Meeting of Sedimentology, Prague, Czech Republic. Book of Abstracts.</li>
+                    <li>Ferrari, et al. (2021). Arquitetura Deposicional de um Sistema Fluvial Entrelaçado. 50º Congresso Brasileiro de Geologia, v. 2, p. 561-561.</li>
+                    <li>Rosa, et al. (2021). Mapeamento Litoestratigráfico em Escala 1:25.000 do Complexo Metamorfico Brusque na Região de Lageado Baixo, Botuverá, SC. 50º Congresso Brasileiro de Geologia, v. 1, p. 150-150.</li>
+                    <li>Oliveira, et al. (2021). Análise Multi-Escala de Sistemas Fluviais Entrelaçados da Formação Jaicos, Bacia do Parnaíba, NE Brasil. 50º Congresso Brasileiro de Geologia, v. 1, p. 203-203.</li>
+				<p><a href="https://scholar.google.com/citations?user=nFnu_ZoAAAAJ&hl=en target="_blank" style="color: #0000FF; text-decoration: none;">Google Scholar</a></p>
+
+                    </li>
+                </ul>
+            </div>
+
+		</div>
+	
+	</div>
+	
+	<div style="height: 50px;"></div>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Henrique Berger Roisenberg. All rights reserved.</p>
     </footer>
 </body>
 </html>
