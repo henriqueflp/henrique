@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Henrique Berger Roisenberg </title>
+    <title>CV | Henrique Berger Roisenberg</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,10 +15,11 @@
         header {
             background: #0000FF;
             color: #fff;
-            padding: 20px 0;
+            padding: 10px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         header .header-content {
             display: flex;
@@ -26,15 +27,10 @@
             align-items: center;
             flex-grow: 1;
         }
-        header img.left {
+        header img.left, header img.right {
             width: 90px;
             height: 90px;
-            margin-left: 20px;
-        }
-        header img.right {
-            width: 90px;
-            height: 90px;
-            margin-right: 20px;
+            margin: 10px;
         }
         header h1 {
             margin: 0;
@@ -52,16 +48,16 @@
             padding: 10px 15px;
             text-decoration: none;
             font-weight: bold;
-            background: #fff; /* Added background color for navigation links */
+            background: #fff;
+            display: inline-block;
+            margin: 5px;
         }
         nav a:hover {
             background: #575757;
         }
         .container {
-            display: flex;
-            width: 80%;
+            width: 90%;
             margin: auto;
-            overflow: hidden;
             padding: 20px;
         }
         .main-content {
@@ -69,29 +65,79 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            flex-grow: 1;
-            margin-right: 20px;
         }
         .right-column {
-            width: 200px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Hide right column on smaller screens */
         }
         .right-column img {
-            display: block;
-            width: 100%;
-            margin-bottom: 20px;
+            width: 100%; /* Make images responsive */
+            max-width: 150px; /* Set a maximum width for the logos */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Add space between logos */
         }
         footer {
             background: #0000FF;
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
             width: 100%;
-            bottom: 0;
+            position: relative; /* Change from fixed to relative */
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 767px) {
+            header {
+                flex-direction: column; /* Stack header content vertically */
+                text-align: center;
+            }
+            header img.right.mobile-hide {
+                display: none; /* Hide the 3x4.jpg image on mobile */
+            }
+            header img.left {
+                width: 60px; /* Make the left image smaller */
+                height: 60px;
+                margin: 10px auto; /* Center the image horizontally */
+            }
+            header h1 {
+                font-size: 1.5rem; /* Adjust title size */
+            }
+            header p {
+                font-size: 0.9rem; /* Adjust subtitle size */
+            }
+        }
+
+        /* Desktop-specific styles */
+        @media (min-width: 768px) {
+            header img.left, header img.right {
+                width: 90px;
+                height: 90px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .container {
+                display: flex;
+                width: 80%;
+            }
+            .main-content {
+                flex-grow: 1;
+                margin-right: 20px;
+            }
+            .right-column {
+                display: block;
+                width: 200px;
+                background: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            footer {
+                position: fixed;
+                bottom: 0;
+            }
         }
     </style>
 </head>
@@ -102,7 +148,7 @@
             <h1>Henrique Berger Roisenberg</h1>
             <p>PhD Candidate in Earth Sciences | Geophysics</p>
         </div>
-        <img src="3x4.jpg" alt="Right Image" class="right">
+        <img src="3x4.jpg" alt="Right Image" class="right mobile-hide"> <!-- Added mobile-hide class -->
     </header>
 
     <nav>
@@ -141,9 +187,9 @@
             <div id="experience" class="section">
                 <h2>Research and Work Experience</h2>
                 <ul>
-				    <li>
+                    <li>
                         <strong>TA Roma Tre University</strong>, PhD Student, Rome, Italy, Sep 2023 - Jan 2024
-                        <br>Teaching assistant of the course "Observational Seismology". 
+                        <br>Teaching assistant of the course "Observational Seismology".
                     </li>
                     <li>
                         <strong>Roma Tre University</strong>, PhD Student, Rome, Italy, Jan 2023 - Dec 2025
@@ -175,24 +221,22 @@
             <div id="publications" class="section">
                 <h2>Publications</h2>
                 <ul>
-					<li>Cammarano, F., Roisenberg, H. B., Conclave, A., Fadel, I., & van der Meijde, M. (2025). On the crustal composition of the Sardinia–Corsica continental block inferred from receiver functions. Solid Earth, 16(2), 135-154. </li>
-					<li>Gewehr de Mello, R., Savian, J. F., Fauth, G., Florindo, F., Di Chiara, A., Satolli, S., ... & Spagnuolo, L. (2025). Paleomagnetic inclinations and relative paleointensity variations during the upper Aptian to middle Albian in Sergipe-Alagoas Basin, South Atlantic Ocean (NE Brazil). Geophysical Journal International, 240(2), 1079-1095.
-					<li>Roisenberg, H. B., Magrini, F., Molinari, I., Boschi, L., & Cammarano, F. (2024). Rayleigh wave attenuation and phase velocity maps of the greater Alpine region from ambient noise. Scientific Reports, 14(1), 29164.</li>
-					<li>Roisenberg, H. B., Cammarano, F., Boschi, L., Magrini, F., & Molinari, I. (2024). Surface-wave attenuation and phase-velocity maps using the AlpArray seismic network: implications for crustal heterogeneity (No. EGU24-753). Copernicus Meetings.</li>
-                    <li>Dillon, L. S., Schwedersky Neto, G., Nunes, R. A., Melo-Filho, L. A., Roisenberg, M., & Davolio, A. (2023). Optimizing the 4D QI Process – a Brazilian turbidite case study. Presented at the 2023 International Congress of the Brazilian Geophysical Society (SBGF), Rio de Janeiro, Brazil. Available at https://www.unisim.cepetro.unicamp.br/publicacoes/2023_SBGF_DILLON_SCHWEDERSKY_NUNES_MELO-FILHO_ROISENBERG_DAVOLIO.pdf
-					<li>Roisenberg, H. B., Bállico, M. B., Guadagnin, F., Manna, M. O., & de Souza, E. G. (2022). Digital Outcrop Models applied to high-resolution stratigraphy in braided fluvial systems: A study case at Jaicós formation in Parnaíba Basin, NE Brazil. Journal of South American Earth Sciences, 119, 104006.</li>
-                    <li>Nunes, C. M. F., Neto, G. S., Velloso, R. Q., Dillon, L. D., Real, T. S., Pinheiro, C. A. G. de F., Roisenberg, H. B., Teraoka, L. Y., & Paiva, R. C. (2022). 4D Reservoir characterization relevant improvement: association of new technologies to the high performance computing (HPC) enviroment. In Rio Oil and Gas Expo and Conference (Vol. 22, Issue 2022, pp. 282–283). Instituto Brasileiro de Petroleo e Gas. https://doi.org/10.48072/2525-7579.rog.2022.282
-					<li>Manna, M. O., et al. (2021). Changes in fluvial architecture induced by discharge variability, Jaicós Formation, Parnaíba Basin, Brazil. Sedimentary Geology, 420, 105924.</li>
+                    <li>Cammarano, F., Roisenberg, H. B., Conclave, A., Fadel, I., & van der Meijde, M. (2025). On the crustal composition of the Sardinia–Corsica continental block inferred from receiver functions. Solid Earth, 16(2), 135-154.</li>
+                    <li>Gewehr de Mello, R., Savian, J. F., Fauth, G., Florindo, F., Di Chiara, A., Satolli, S., ... & Spagnuolo, L. (2025). Paleomagnetic inclinations and relative paleointensity variations during the upper Aptian to middle Albian in Sergipe-Alagoas Basin, South Atlantic Ocean (NE Brazil). Geophysical Journal International, 240(2), 1079-1095.</li>
+                    <li>Roisenberg, H. B., Magrini, F., Molinari, I., Boschi, L., & Cammarano, F. (2024). Rayleigh wave attenuation and phase velocity maps of the greater Alpine region from ambient noise. Scientific Reports, 14(1), 29164.</li>
+                    <li>Roisenberg, H. B., Cammarano, F., Boschi, L., Magrini, F., & Molinari, I. (2024). Surface-wave attenuation and phase-velocity maps using the AlpArray seismic network: implications for crustal heterogeneity (No. EGU24-753). Copernicus Meetings.</li>
+                    <li>Dillon, L. S., Schwedersky Neto, G., Nunes, R. A., Melo-Filho, L. A., Roisenberg, M., & Davolio, A. (2023). Optimizing the 4D QI Process – a Brazilian turbidite case study. Presented at the 2023 International Congress of the Brazilian Geophysical Society (SBGF), Rio de Janeiro, Brazil. Available at <a href="https://www.unisim.cepetro.unicamp.br/publicacoes/2023_SBGF_DILLON_SCHWEDERSKY_NUNES_MELO-FILHO_ROISENBERG_DAVOLIO.pdf">link</a></li>
+                    <li>Roisenberg, H. B., Bállico, M. B., Guadagnin, F., Manna, M. O., & de Souza, E. G. (2022). Digital Outcrop Models applied to high-resolution stratigraphy in braided fluvial systems: A study case at Jaicós formation in Parnaíba Basin, NE Brazil. Journal of South American Earth Sciences, 119, 104006.</li>
+                    <li>Nunes, C. M. F., Neto, G. S., Velloso, R. Q., Dillon, L. D., Real, T. S., Pinheiro, C. A. G. de F., Roisenberg, H. B., Teraoka, L. Y., & Paiva, R. C. (2022). 4D Reservoir characterization relevant improvement: association of new technologies to the high performance computing (HPC) enviroment. In Rio Oil and Gas Expo and Conference (Vol. 22, Issue 2022, pp. 282–283). Instituto Brasileiro de Petroleo e Gas. <a href="https://doi.org/10.48072/2525-7579.rog.2022.282">https://doi.org/10.48072/2525-7579.rog.2022.282</a></li>
+                    <li>Manna, M. O., et al. (2021). Changes in fluvial architecture induced by discharge variability, Jaicós Formation, Parnaíba Basin, Brazil. Sedimentary Geology, 420, 105924.</li>
                     <li>Nunes, et al. (2021). HPC for Seismic Processing and Stochastic Inversion in Brazil Asset. SIAM Conference on Mathematical and Computational Issues in the Geosciences.</li>
                     <li>Roisenberg, et al. (2020). Modelos Virtuais de Afloramento Aplicados a Arquitetura de Sistemas Fluviais: Estudo de Caso na Formação Jaicos, Bacia do Parnaíba, Brasil. 50º Congresso Brasileiro de Geologia, v. 1, p. 339-339.</li>
                     <li>Manna, et al. (2021). Low and High Discharge Variability Fluvial Styles: example of the Jaicos Formation, Parnaíba Basin, Brazil. 35th Meeting of Sedimentology, Prague, Czech Republic. Book of Abstracts.</li>
                     <li>Ferrari, et al. (2021). Arquitetura Deposicional de um Sistema Fluvial Entrelaçado. 50º Congresso Brasileiro de Geologia, v. 2, p. 561-561.</li>
                     <li>Rosa, et al. (2021). Mapeamento Litoestratigráfico em Escala 1:25.000 do Complexo Metamorfico Brusque na Região de Lageado Baixo, Botuverá, SC. 50º Congresso Brasileiro de Geologia, v. 1, p. 150-150.</li>
-                    <li>Oliveira, et al. (2021). Análise Multi-Escala de Sistemas Fluviais Entrelaçados da Formação Jaicos, Bacia do Parnaíba, NE Brasil. 50º Congresso Brasileiro de Geologia, v. 1, p. 203-203.</li>
-
-					<p><a href="https://scholar.google.com/citations?user=nFnu_ZoAAAAJ&hl=en target="_blank" style="color: #0000FF; text-decoration: none;">Google Scholar</a></p>
-
+                    <li>Oliveira, et al. (2021). Análise Multi-Escala de Sistemas Fluviais Entrelaçados da Formación Jaicos, Bacia do Parnaíba, NE Brasil. 50º Congresso Brasileiro de Geologia, v. 1, p. 203-203.</li>
                 </ul>
+                <p><a href="https://scholar.google.com/citations?user=nFnu_ZoAAAAJ&hl=en" target="_blank" style="color: #0000FF; text-decoration: none;">Google Scholar</a></p>
             </div>
 
             <div id="skills" class="section">
@@ -238,12 +282,15 @@
             <div id="awards" class="section">
                 <h2>Awards and Recognitions</h2>
                 <ul>
-					<li> 
-						<strong>Outstanding poster prize</strong> on the European Seismological Comission (2024) held in Corfu, Greece
-					<li> 
-						Grant to partecipate on the Young Seismologists Training Course (2024) held in Corfu, Greece
-					<li> 
-						2x <strong>Roland Schlich</strong> EGU General Assembly Early Career Scientist's Travel Support (2024 and 2025)
+                    <li>
+                        <strong>Outstanding poster prize</strong> on the European Seismological Commission (2024) held in Corfu, Greece
+                    </li>
+                    <li>
+                        Grant to participate in the Young Seismologists Training Course (2024) held in Corfu, Greece
+                    </li>
+                    <li>
+                        2x <strong>Roland Schlich</strong> EGU General Assembly Early Career Scientist's Travel Support (2024 and 2025)
+                    </li>
                     <li>
                         <strong>Third Best Poster</strong> at the CRUST Workshop (2024)
                         <br>Awarded for the poster "Surface Wave Attenuation From Seismic Ambient Noise in the Greater Alpine Region".
@@ -268,14 +315,13 @@
             <img src="romatre_logo.jpeg" alt="Roma Tre University">
             <img src="ufrgs_logo.png" alt="Federal University of Rio Grande do Sul">
             <img src="ufsc_logo.png" alt="Federal University of Santa Catarina">
-			<img src="bergen_logo.png" alt="University of Bergen">
+            <img src="bergen_logo.png" alt="University of Bergen">
         </div>
     </div>
-	
-	<div style="height: 50px;"></div>
+
+    <div style="height: 50px;"></div>
 
     <footer>
-        <p>&copy; 2024 Henrique Berger Roisenberg. All rights reserved.</p>
+        <p>&copy; 2025 Henrique Berger Roisenberg. All rights reserved.</p>
     </footer>
 </body>
-</html>

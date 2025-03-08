@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>&#127758 &#127752 | Henrique Berger Roisenberg </title>
+    <title>&#127758 &#127752 | Henrique Berger Roisenberg</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,10 +15,11 @@
         header {
             background: #0000FF;
             color: #fff;
-            padding: 20px 0;
+            padding: 10px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         header .header-content {
             display: flex;
@@ -26,15 +27,10 @@
             align-items: center;
             flex-grow: 1;
         }
-        header img.left {
+        header img.left, header img.right {
             width: 90px;
             height: 90px;
-            margin-left: 20px;
-        }
-        header img.right {
-            width: 90px;
-            height: 90px;
-            margin-right: 20px;
+            margin: 10px;
         }
         header h1 {
             margin: 0;
@@ -52,15 +48,16 @@
             padding: 10px 15px;
             text-decoration: none;
             font-weight: bold;
-            background: #fff; /* Added background color for navigation links */
+            background: #fff;
+            display: inline-block;
+            margin: 5px;
         }
         nav a:hover {
             background: #575757;
         }
         .container {
-            width: 80%;
+            width: 90%;
             margin: auto;
-            overflow: hidden;
             padding: 20px;
         }
         .main-content {
@@ -74,9 +71,51 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
             width: 100%;
-            bottom: 0;
+            position: relative; /* Change from fixed to relative */
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 767px) {
+            header {
+                flex-direction: column; /* Stack header content vertically */
+                text-align: center;
+            }
+            header img.right.mobile-hide {
+                display: none; /* Hide the 3x4.jpg image on mobile */
+            }
+            header img.left {
+                width: 60px; /* Make the left image smaller */
+                height: 60px;
+                margin: 10px auto; /* Center the image horizontally */
+            }
+            header h1 {
+                font-size: 1.5rem; /* Adjust title size */
+            }
+            header p {
+                font-size: 0.9rem; /* Adjust subtitle size */
+            }
+        }
+
+        /* Desktop-specific styles */
+        @media (min-width: 768px) {
+            header img.left, header img.right {
+                width: 90px;
+                height: 90px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .container {
+                width: 80%;
+            }
+            footer {
+                position: fixed;
+                bottom: 0;
+            }
         }
     </style>
 </head>
@@ -87,7 +126,7 @@
             <h1>Henrique Berger Roisenberg</h1>
             <p>PhD Candidate in Earth Sciences | Geophysics</p>
         </div>
-        <img src="3x4.jpg" alt="Right Image" class="right">
+        <img src="3x4.jpg" alt="Right Image" class="right mobile-hide"> <!-- Added mobile-hide class -->
     </header>
 
     <nav>
@@ -99,13 +138,14 @@
         <a href="personal.html">Personal</a>
     </nav>
 
-<div class="container">
-    <div class="main-content">
-        <h2>Welcome to My Personal Webpage</h2>
-        <p>Hey there! My name is Henrique and I am currently a PhD candidate in Earth Sciences at Roma Tre University in Rome, Italy. My current research focuses on using seismological constraints to unveil the temperature and composition of the crust. I have experience on previous research on seismic attenuation, seismic tomography, rock physics, paleomagnetism, and stratigraphy. Here you can find information about my research, publications, grants, and more.  I am currently on my last year of PhD (finishing on December) and I am searching for a Post-Doc. Feel free to contact me by <a href="mailto:henrique.bergerroisenberg@uniroma3.it" target="_blank" style="color: #0000FF; text-decoration: none;">email</a>.</p> &#128515
+    <div class="container">
+        <div class="main-content">
+            <h2>Welcome to My Personal Webpage</h2>
+            <p>Hey there! My name is Henrique, and I am currently a PhD candidate in Earth Sciences at Roma Tre University in Rome, Italy. My current research focuses on using seismological constraints to unveil the temperature and composition of the crust. I have experience in previous research on seismic attenuation, seismic tomography, rock physics, paleomagnetism, and stratigraphy. Here, you can find information about my research, publications, grants, and more. I am currently in my last year of PhD (finishing in December) and I am searching for a Post-Doc. Feel free to contact me by <a href="mailto:henrique.bergerroisenberg@uniroma3.it" target="_blank" style="color: #0000FF; text-decoration: none;">email</a>. &#128515</p>
+        </div>
     </div>
-</div>
 
+    <div style="height: 50px;"></div>
 
     <footer>
         <p>&copy; 2025 Henrique Berger Roisenberg. All rights reserved.</p>
