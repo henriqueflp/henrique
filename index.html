@@ -1,154 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>&#127758 &#127752 | Henrique Berger Roisenberg</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #0000FF;
-            color: #fff;
-            padding: 10px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        header .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            flex-grow: 1;
-        }
-        header img.left, header img.right {
-            width: 90px;
-            height: 90px;
-            margin: 10px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
-        }
-        header p {
-            margin: 5px 0 0;
-        }
-        nav {
-            text-align: center;
-            margin-top: 10px;
-        }
-        nav a {
-            color: #333;
-            padding: 10px 15px;
-            text-decoration: none;
-            font-weight: bold;
-            background: #fff;
-            display: inline-block;
-            margin: 5px;
-        }
-        nav a:hover {
-            background: #575757;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-            padding: 20px;
-        }
-        .main-content {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background: #0000FF;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-            position: relative; /* Change from fixed to relative */
-        }
-
-        /* Mobile-specific styles */
-        @media (max-width: 767px) {
-            header {
-                flex-direction: column; /* Stack header content vertically */
-                text-align: center;
-            }
-            header img.right.mobile-hide {
-                display: none; /* Hide the 3x4.jpg image on mobile */
-            }
-            header img.left {
-                width: 60px; /* Make the left image smaller */
-                height: 60px;
-                margin: 10px auto; /* Center the image horizontally */
-            }
-            header h1 {
-                font-size: 1.5rem; /* Adjust title size */
-            }
-            header p {
-                font-size: 0.9rem; /* Adjust subtitle size */
-            }
-        }
-
-        /* Desktop-specific styles */
-        @media (min-width: 768px) {
-            header img.left, header img.right {
-                width: 90px;
-                height: 90px;
-            }
-            header h1 {
-                font-size: 1.8rem;
-            }
-            header p {
-                font-size: 1rem;
-            }
-            .container {
-                width: 80%;
-            }
-            footer {
-                position: fixed;
-                bottom: 0;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Henrique Berger Roisenberg | Seismologist</title>
+<meta name="description" content="Brazilian geophysicist and postdoctoral researcher at Kiel University. Seismic methods and data analysis to image the Earth’s crust and mantle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f9fb;--panel:#fff;--ink:#12212e;--mute:#5a6b7a;--line:#d6dee6;--accent:#1d4e89;--accent-soft:#e6eef7}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1820;--panel:#14212c;--ink:#e7edf3;--mute:#9bacbb;--line:#27384a;--accent:#7fb0e6;--accent-soft:#182c40}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:600;line-height:1.2;margin:0}
+.wrap{display:grid;grid-template-columns:290px minmax(0,1fr);gap:56px;max-width:1120px;margin:0 auto;padding:56px 28px}
+aside{position:sticky;top:40px;align-self:start}
+aside img{width:132px;height:176px;object-fit:cover;border-radius:4px;display:block;margin-bottom:20px;background:var(--line)}
+aside h1{font-size:2rem}
+.role{margin:8px 0 2px;font-weight:500}
+.aff{margin:0 0 22px;color:var(--mute);font-size:.95rem}
+nav ul,.links{list-style:none;margin:0;padding:0}
+nav li{border-left:2px solid var(--line)}
+nav a{display:block;padding:4px 14px;text-decoration:none;color:var(--mute)}
+nav a:hover{color:var(--ink);border-left:0}
+nav li:has(a:hover){border-color:var(--accent)}
+.links{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.92rem}
+main section{padding-bottom:52px;scroll-margin-top:24px}
+h2{font-size:1.6rem;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:22px}
+h3{font-size:1.1rem;margin:26px 0 10px;color:var(--mute);font-weight:400;font-style:italic}
+.lead{font-family:Newsreader,Georgia,serif;font-size:1.3rem;line-height:1.55;margin:0 0 18px}
+.trace{display:block;width:100%;height:56px;margin:6px 0 30px;color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:16px 0 0}
+.tags li{background:var(--accent-soft);padding:3px 12px;border-radius:99px;font-size:.88rem}
+.pubs{list-style:none;margin:0;padding:0}
+.pubs li{padding:14px 0;border-bottom:1px solid var(--line)}
+.pubs li:last-child{border:0}
+.pubs b{font-weight:500}
+.pubs .me{font-weight:600}
+.pubs small{display:block;color:var(--mute);margin-top:2px}
+.badge{display:inline-block;font-size:.8rem;color:var(--accent);border:1px solid var(--accent);border-radius:3px;padding:0 6px;margin-right:6px}
+.repos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.repo{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);padding:18px 20px}
+.repo h3{margin:0 0 6px;color:var(--ink);font-style:normal;font-size:1.2rem}
+.repo p{margin:0 0 12px;font-size:.95rem;color:var(--mute)}
+.repo .r{display:flex;gap:16px;font-size:.92rem}
+dl{margin:0;display:grid;grid-template-columns:9.5rem 1fr;gap:14px 20px}
+dt{color:var(--mute)}
+dd{margin:0}
+dd small{display:block;color:var(--mute)}
+.note{color:var(--mute);font-size:.92rem}
+footer{max-width:1120px;margin:0 auto;padding:24px 28px 48px;color:var(--mute);font-size:.88rem;border-top:1px solid var(--line)}
+@media (max-width:860px){
+.wrap{grid-template-columns:1fr;gap:28px;padding:32px 20px}
+aside{position:static}
+nav{display:none}
+dl{grid-template-columns:1fr;gap:2px 0}
+dt{margin-top:12px}
+}
+</style>
 </head>
 <body>
-    <header>
-        <img src="seismo.png" alt="Left Image" class="left">
-        <div class="header-content">
-            <h1>Henrique Berger Roisenberg</h1>
-            <p>PhD Candidate in Earth Sciences | Geophysics</p>
-        </div>
-        <img src="3x4.jpg" alt="Right Image" class="right mobile-hide"> <!-- Added mobile-hide class -->
-    </header>
+<div class="wrap">
+<aside>
+  <img src="3x4.jpg" alt="Portrait of Henrique Berger Roisenberg">
+  <h1>Henrique Berger Roisenberg</h1>
+  <p class="role">Postdoctoral researcher, Seismology</p>
+  <p class="aff">Institute of Geosciences,<br>Kiel University (CAU), Germany</p>
+  <nav aria-label="Sections">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#code">Code &amp; data</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#talks">Awards &amp; funding</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <ul class="links">
+    <li><a href="https://scholar.google.com/citations?user=nFnu_ZoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+    <li><a href="https://orcid.org/0000-0002-5855-479X" target="_blank" rel="noopener">ORCID</a></li>
+    <li><a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K8454541P4" target="_blank" rel="noopener">Lattes</a></li>
+  </ul>
+</aside>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="cv.html">CV</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="grants.html">Grants</a>
-        <a href="personal.html">Personal</a>
-    </nav>
+<main>
+<section id="about">
+  <svg class="trace" id="trace" viewBox="0 0 800 56" preserveAspectRatio="none" role="img" aria-label="Decorative seismogram trace"></svg>
+  <p class="lead">I use seismic methods to unveil the structure and properties of the Earth’s crust and mantle.</p>
+  <p>I am a Brazilian geophysicist, and my path in science has taken me through Norway, Italy and Germany. I work with seismic waves from ambient noise and earthquakes, using tomography, attenuation, anisotropy and receiver functions to learn what lies beneath our feet. What I enjoy most is data analysis: turning large and noisy seismic datasets into robust images and models that other researchers can use and test.</p>
+  <ul class="tags">
+    <li>Ambient-noise tomography</li>
+    <li>Surface-wave attenuation</li>
+    <li>Radial anisotropy</li>
+    <li>Receiver functions</li>
+    <li>Crustal composition</li>
+    <li>Data analysis</li>
+  </ul>
+</section>
 
-    <div class="container">
-        <div class="main-content">
-            <h2>Welcome to My Personal Webpage</h2>
-            <p>Hey there! My name is Henrique, and I am currently a PhD candidate in Earth Sciences at Roma Tre University in Rome, Italy. My current research focuses on using seismological constraints to unveil the temperature and composition of the crust. I have experience in previous research on seismic attenuation, seismic tomography, rock physics, paleomagnetism, and stratigraphy. Here, you can find information about my research, publications, grants, and more. I am currently in my last year of PhD (finishing in December) and I am searching for a Post-Doc. Feel free to contact me by <a href="mailto:henrique.bergerroisenberg@uniroma3.it" target="_blank" style="color: #0000FF; text-decoration: none;">email</a>. &#128515</p>
-        </div>
-    </div>
+<section id="publications">
+  <h2>Publications</h2>
+  <p class="note">Full list on <a href="https://scholar.google.com/citations?user=nFnu_ZoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> and <a href="https://orcid.org/0000-0002-5855-479X" target="_blank" rel="noopener">ORCID</a>. My name in bold.</p>
+  <h3>Journal articles</h3>
+  <ol class="pubs" reversed>
+    <li><span class="me">Roisenberg, H. B.</span>, Eckel, F., El-Sharkawy, A., Rosenberg, C., Boschi, L., Meier, T., &amp; Cammarano, F. (2026).
+      <b>Imaging the Alpine collision with seismic radial anisotropy.</b> <i>Journal of Geophysical Research: Solid Earth</i>, 131(9), e2025JB033428.
+      <small><a href="https://doi.org/10.1029/2025jb033428">DOI</a></small></li>
+    <li><span class="me">Roisenberg, H. B.</span>, Boschi, L., &amp; Cammarano, F. (2026).
+      <b>Thermal and compositional characterization of the Greater Alpine crust using seismic observables.</b> <i>Journal of Geophysical Research: Solid Earth</i>, 131(2), e2025JB033617.
+      <small><a href="https://doi.org/10.1029/2025jb033617">DOI</a></small></li>
+    <li>de Mello, R. G., Savian, J. F., Florindo, F., Di Chiara, A., Coccioni, R., Frontalini, F., Satolli, S., <span class="me">Roisenberg, H. B.</span>, et al. (2026).
+      <b>Paleomagnetic inclinations and relative paleointensity variations during the Aptian in Poggio le Guaine core, Umbria–Marche Basin, Italy.</b> <i>Earth and Planetary Physics</i>.
+      <small><a href="http://dx.doi.org/10.26464/epp2026090">DOI</a></small></li>
+    <li>Gewehr de Mello, R., Savian, J. F., Fauth, G., Florindo, F., Di Chiara, A., Satolli, S., <span class="me">Roisenberg, H. B.</span>, et al. (2025).
+      <b>Paleomagnetic inclinations and relative paleointensity variations during the upper Aptian to middle Albian in Sergipe-Alagoas Basin, South Atlantic Ocean (NE Brazil).</b> <i>Geophysical Journal International</i>, 240(2), 1079–1095.
+      <small><a href="https://doi.org/10.1093/gji/ggae432">DOI</a></small></li>
+    <li>Cammarano, F., <span class="me">Roisenberg, H. B.</span>, Conclave, A., Fadel, I., &amp; van der Meijde, M. (2025).
+      <b>On the crustal composition of the Sardinia–Corsica continental block inferred from receiver functions.</b> <i>Solid Earth</i>, 16(2), 135–154.
+      <small><a href="https://doi.org/10.5194/se-16-135-2025">DOI</a></small></li>
+    <li><span class="me">Roisenberg, H. B.</span>, Magrini, F., Molinari, I., Boschi, L., &amp; Cammarano, F. (2024).
+      <b>Rayleigh wave attenuation and phase velocity maps of the greater Alpine region from ambient noise.</b> <i>Scientific Reports</i>, 14(1), 29164.
+      <small><a href="https://doi.org/10.1038/s41598-024-80729-z">DOI</a></small></li>
+    <li><span class="me">Roisenberg, H. B.</span>, Bállico, M. B., Guadagnin, F., Manna, M. O., &amp; de Souza, E. G. (2022).
+      <b>Digital outcrop models applied to high-resolution stratigraphy in braided fluvial systems: a case study at the Jaicós Formation, Parnaíba Basin, NE Brazil.</b> <i>Journal of South American Earth Sciences</i>, 119, 104006.
+      <small><a href="https://doi.org/10.1016/j.jsames.2022.104006">DOI</a></small></li>
+    <li>Manna, M. O., dos Santos Scherer, C. M., Bállico, M. B., dos Reis, A. D., Moraes, L. V., Ferrari, L. A. B., <span class="me">Roisenberg, H. B.</span>, &amp; de Oliveira, V. G. (2021).
+      <b>Changes in fluvial architecture induced by discharge variability, Jaicós Formation (Silurian–Devonian), Parnaíba Basin, Brazil.</b> <i>Sedimentary Geology</i>, 420, 105924.
+      <small><a href="https://doi.org/10.1016/j.sedgeo.2021.105924">DOI</a></small></li>
+  </ol>
+  <h3>Conference abstracts</h3>
+  <ol class="pubs" reversed>
+    <li>Meier, T., <span class="me">Roisenberg, H. B.</span>, Eckel, F., El-Sharkawy, A., Rosenberg, C., Boschi, L., &amp; Cammarano, F. (2026).
+      <b>AlpRA25: a new radial anisotropy model of the Alps from ambient noise and earthquake surface waves.</b> Copernicus Meetings.</li>
+    <li><span class="me">Roisenberg, H. B.</span>, Eckel, F., El-Sharkawy, A., Rosenberg, C., Boschi, L., Meier, T., &amp; Cammarano, F. (2026).
+      <b>What does radial anisotropy tell us about the Alpine collision?</b> Copernicus Meetings.</li>
+    <li><span class="me">Roisenberg, H. B.</span>, Boschi, L., &amp; Cammarano, F. (2025).
+      <b>Physical and compositional characterization of the Greater Alpine crust using seismic observables.</b> EGU General Assembly, EGU25-713.</li>
+    <li><span class="me">Roisenberg, H. B.</span>, Cammarano, F., Boschi, L., Magrini, F., &amp; Molinari, I. (2024).
+      <b>Surface-wave attenuation and phase-velocity maps using the AlpArray seismic network: implications for crustal heterogeneity.</b> EGU General Assembly, EGU24-753.</li>
+    <li>Nunes, C. M. F., et al., incl. <span class="me">Roisenberg, H. B.</span> (2022).
+      <b>4D reservoir characterization relevant improvement: association of new technologies to the HPC environment.</b> Rio Oil &amp; Gas Expo and Conference, 282–283.</li>
+    <li>Nunes, C., et al., incl. <span class="me">Roisenberg, H.</span> (2021).
+      <b>HPC for seismic processing and stochastic inversion in Brazil asset.</b> SIAM Conference on Mathematical and Computational Issues in the Geosciences.</li>
+  </ol>
+  <h3>Theses</h3>
+  <ol class="pubs" reversed>
+      <li><span class="me">Roisenberg, H. B.</span> (2026). <b>Physical characterization of the greater Alpine crust using seismic observables.</b> PhD thesis, Roma Tre University.</li>
+    <li><span class="me">Roisenberg, H. B.</span> (2022). <b>Paleomagnetismo e paleointensidade relativa do testemunho SER-01 (Bacia de Sergipe-Alagoas) durante o Cretáceo Inferior.</b> MSc thesis, UFRGS.</li>
+    <li><span class="me">Roisenberg, H. B.</span> (2020). <b>Modelos virtuais de afloramento: aplicação na estratigrafia de alta resolução em sistemas fluviais entrelaçados.</b> BSc thesis, UFSC.</li>
+  </ol>
+</section>
 
-    <div style="height: 50px;"></div>
+<section id="code">
+  <h2>Code &amp; data</h2>
+  <p>Models, maps and workflows from my research, shared for reuse and reproducibility.</p>
+  <div class="repos">
+    <article class="repo">
+      <h3>AlpRA25</h3>
+      <p>A new radial anisotropy model of the Alps from ambient-noise and earthquake surface waves.</p>
+      <div class="r"><a href="https://zenodo.org/records/21807214">Code</a><a href="https://doi.org/10.5281/zenodo.21807214">Data (DOI)</a><a href="https://doi.org/10.1029/2025jb033428">Paper</a></div>
+    </article>
+    <article class="repo">
+      <h3>Attenuation</h3>
+      <p>Rayleigh-wave attenuation and phase-velocity maps of the greater Alpine region from ambient noise.</p>
+      <div class="r"><a href="https://zenodo.org/records/10839031">Code</a><a href="https://doi.org/10.5281/zenodo.10839031">Data (DOI)</a><a href="https://doi.org/10.1038/s41598-024-80729-z">Paper</a></div>
+    </article>
+    <article class="repo">
+      <h3>Thermal and compositional model</h3>
+      <p>Thermal and compositional model of the Greater Alpine crust from seismic observables.</p>
+      <div class="r"><a href="https://zenodo.org/records/15646422">Code</a><a href="https://doi.org/10.5281/zenodo.15646422">Data (DOI)</a><a href="https://doi.org/10.1029/2025jb033617">Paper</a></div>
+    </article>
+    <!-- Copy an <article class="repo"> block to add more repositories -->
+  </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Henrique Berger Roisenberg. All rights reserved.</p>
-    </footer>
+<section id="teaching">
+  <h2>Teaching</h2>
+  <dl>
+    <dt>2026</dt><dd><b>Teaching assistant, Rock Physics</b><small>Institute of Geosciences, Kiel University (CAU)</small><!-- add semester and tasks --></dd>
+    <dt>2023–2024</dt><dd><b>Teaching assistant, Observational Seismology</b><small>Roma Tre University</small></dd>
+    <dt>2016</dt><dd><b>Teaching assistant, Instrumental Geology</b><small>Federal University of Santa Catarina</small></dd>
+  </dl>
+</section>
+
+<section id="talks">
+  <h2>Awards &amp; funding</h2>
+  <dl>
+    <dt>2024</dt><dd>Third best poster, CRUST Workshop<small>“Surface Wave Attenuation From Seismic Ambient Noise in the Greater Alpine Region”</small></dd>
+    <dt>2024</dt><dd>Young Seismologist Training Course</dd>
+    <dt>2024</dt><dd>EGU General Assembly Early Career Scientists’ Travel Support</dd>
+    <dt>2021–2022</dt><dd>CNPq master’s scholarship</dd>
+    <dt>2021</dt><dd>Best oral presentation, 50th Brazilian Geological Congress</dd>
+    <dt>2020</dt><dd>Best Graduating Student, Federal University of Santa Catarina</dd>
+    <dt>2019–2020</dt><dd>Petrobras scholarship</dd>
+  </dl>
+</section>
+
+<section id="background">
+  <h2>Background</h2>
+  <dl>
+    <dt>2025–present</dt><dd><b>Postdoctoral researcher</b>, Institute of Geosciences, Kiel University<small>Seismic tomography and geophysical imaging of the Alpine–Apenninic region</small></dd>
+    <dt>2023–2025</dt><dd><b>PhD in Earth Sciences</b>, Roma Tre University<small>Seismic ambient noise and surface-wave attenuation. Teaching assistant, Observational Seismology</small></dd>
+    <dt>2021–2022</dt><dd><b>MSc in Geosciences</b>, UFRGS, Brazil<small>Magnetostratigraphy of a core from the Sergipe-Alagoas Basin (CNPq)</small></dd>
+    <dt>2019–2021</dt><dd><b>Research assistant</b>, QIGEO Consulting<small>Fluid substitution and seismic inversion analysis</small></dd>
+    <dt>2015–2020</dt><dd><b>BSc in Geology</b>, UFSC, Brazil<small>Graduated with honors, GPA 9.26/10. Exchange semester, University of Bergen</small></dd>
+    <dt>Skills</dt><dd>Python (ObsPy), MATLAB, GMT, LaTeX, HPC clusters, QGIS<small>English, Portuguese, Spanish, Italian (proficient); German (intermediate)</small></dd>
+  </dl>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Open to collaborations and enquiries. <a href="mailto:henrique.roisenberg@ifg.uni-kiel.de">henrique.roisenberg@ifg.uni-kiel.de</a></p>
+  <p class="note">Born in Florianópolis, Brazil. Based in Kiel, Germany.</p>
+</section>
+</main>
+</div>
+<footer>© <span id="y">2026</span> Henrique Berger Roisenberg</footer>
+<script>
+// Decorative seismogram: deterministic pseudo-noise with an event arrival
+(function(){
+  var p=[],s=7,n=400;
+  function r(){s=(s*16807)%2147483647;return s/2147483647-.5}
+  for(var i=0;i<=n;i++){
+    var x=i*2,t=i/n,a=3+(t>.38?Math.exp(-(t-.38)*5)*(t<.42?(t-.38)*500:20):0);
+    p.push((i?"L":"M")+x+" "+(28+r()*a*1.4+Math.sin(i*.9)*(t>.38?a*.4:0)).toFixed(1));
+  }
+  document.getElementById("trace").innerHTML='<path d="'+p.join("")+'" fill="none" stroke="currentColor" stroke-width="1.2" vector-effect="non-scaling-stroke"/>';
+  document.getElementById("y").textContent=new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
